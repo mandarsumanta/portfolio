@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sumanta Mandar - Filmmaker</title>
+  <meta name="description" content="Portfolio and filmography of Sumanta Mandar - director, cinematographer, colorist, and editor based in San Diego." />
+  <meta property="og:title" content="Sumanta Mandar - Filmmaker" />
+  <meta property="og:description" content="Portfolio and filmography of Sumanta Mandar - director, cinematographer, colorist, and editor based in San Diego." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fade 0.6s ease-out both; }
+    @keyframes fade { from {opacity:0; transform: translateY(4px)} to {opacity:1; transform: translateY(0)} }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 selection:bg-cyan-500/30">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/60 border-b border-white/5">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="#top" class="font-semibold tracking-wide">SUMANTA MANDAR</a>
+      <ul class="flex items-center gap-6 text-sm">
+        <li><a class="opacity-80 hover:opacity-100" href="#work">Work</a></li>
+        <li><a class="opacity-80 hover:opacity-100" href="#films">Films</a></li>
+        <li><a class="opacity-80 hover:opacity-100" href="#about">About</a></li>
+        <li><a class="opacity-80 hover:opacity-100" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 fade-in">
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-3">
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+          Filmmaker focused on <span class="text-cyan-400">story</span> and <span class="text-cyan-400">visual craft</span>
+        </h1>
+        <p class="mt-6 text-slate-300 max-w-2xl">
+          Director • Cinematographer • Colorist • Editor based in San Diego. MFA (Film & TV Production), San Diego State University (’26). Available for narrative, documentary, and commercial work.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#work" class="px-5 py-2.5 rounded-2xl bg-cyan-500 text-slate-950 font-medium hover:brightness-110">View Work</a>
+          <a href="#contact" class="px-5 py-2.5 rounded-2xl border border-white/10 hover:bg-white/5">Contact</a>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <!-- Showreel placeholder -->
+        <a 
+  href="https://youtu.be/xF4n6yFOS5A" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="block aspect-video rounded-2xl overflow-hidden border border-white/10"
+>
+  <img 
+    src="images/Colorreel.png" 
+    alt="Showreel Thumbnail"
+    class="w-full h-full object-cover hover:opacity-90 transition"
+  >
+</a>
+
+        </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section id="work" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-2xl sm:text-3xl font-semibold">Selected Work</h2>
+      <a href="#films" class="text-sm opacity-80 hover:opacity-100">Full credits ↓</a>
+    </div>
+    <div id="work-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"></div>
+      </section>
+
+  <!-- FILMS -->
+  <section id="films" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-white/5">
+    <h2 class="text-2xl sm:text-3xl font-semibold">Films</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search titles or roles…"
+        class="md:col-span-2 w-full px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-white/20 outline-none focus:ring-2 ring-cyan-500/50"
+      />
+      <select
+        id="roleFilter"
+        class="w-full px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-white/20 outline-none focus:ring-2 ring-cyan-500/50"
+      >
+        <option value="">All roles</option>
+        <option>Director</option>
+        <option>Writer</option>
+        <option>Editor</option>
+        <option>Director of Photography</option>
+        <option>Colorist</option>
+        <option>Gaffer</option>
+        <option>Assistant Camera</option>
+        <option>Assistant Director</option>
+        <option>Producer</option>
+        <option>Key Grip</option>
+        <option>Production Assistant</option>
+        <option>Animation</option>
+        <option>Photography</option>
+      </select>
+    </div>
+    <div class="mt-6" id="creditCount"></div>
+    <ul id="credits" class="mt-4 divide-y divide-white/5 rounded-xl border border-white/10 bg-white/2"></ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-white/5">
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <!-- Headshot: put a file named headshot.jpg next to index.html -->
+      <div class="md:col-span-1 flex justify-center md:justify-start">
+        <img src="images/headshot.jpg" alt="Sumanta Mandar headshot"
+             class="rounded-2xl w-85 h-85 object-cover border border-white/10 shadow-lg">
+      </div>
+      <div class="md:col-span-2">
+        <h2 class="text-2xl sm:text-3xl font-semibold">About</h2>
+        <p class="mt-4 text-slate-300">
+          Innovative and committed filmmaker with experience across commercial, independent, and academic projects.
+          Proficient in videography, post-production, animation, and visual effects. Strong collaborator with a focus
+          on storytelling and efficient on-set leadership.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-6">
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-medium">Education</h3>
+            <ul class="mt-2 text-sm text-slate-300 leading-relaxed">
+              <li><strong>San Diego State University</strong> - MFA Film & Television Production, 2026</li>
+              <li><strong>Islington College / London Metropolitan University</strong> - B.Sc. Multimedia Technologies, 2018</li>
+            </ul>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-medium">Skills</h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Editing, Cinematography, Color Grading, Lighting, Directing, Storytelling,
+              Collaboration, Leadership, Time Management
+            </p>
+          </div>
+        </div>
+        <a href="resume.pdf" class="inline-block mt-6 px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10">
+          Download Résumé
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-white/5">
+    <h2 class="text-2xl sm:text-3xl font-semibold">Contact</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-6">
+      <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+        <div class="text-sm text-slate-400">Email</div>
+        <a class="font-medium" href="mailto:mandarsumanta@gmail.com">mandarsumanta@gmail.com</a>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+        <div class="text-sm text-slate-400">Phone</div>
+        <a class="font-medium" href="tel:+16576261903">(657) 626-1903</a>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+        <div class="text-sm text-slate-400">Location</div>
+        <div class="font-medium">San Diego, California</div>
+      </div>
+    </div>
+    <p class="text-xs text-slate-500 mt-4">
+      For production, freelance work, or partnerships, contact me with your project details and timeline.
+    </p>
+  </section>
+
+  <footer class="border-t border-white/5 py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Sumanta Mandar. All rights reserved.
+  </footer>
+
+  <script>
+    // ====== FEATURED WORK (tiles on home section) ======
+    // Replace each url: '#' with your real video links.
+    // Optionally set thumbnail: 'images/your-still.jpg'
+    const featured = [
+      { title: 'Five More Minutes (2025)', role: 'Director / Writer / Colorist', url: 'https://youtu.be/KUxx5pipoUw', thumbnail: 'images/FMM.png' },
+      { title: 'Delirium (2024)', role: 'Director / Writer / Editor / DP / Gaffer', url: 'https://youtu.be/-AuKL5fnhEo', thumbnail: 'images/Delirium.jpg' },
+      { title: 'Shadows & Spotlights (2023)', role: 'Director / Writer / Editor', url: 'https://youtu.be/f7IHnSQP3zg', thumbnail: 'images/SAS.jpg' },
+      { title: 'Wanderer (2025)', role: 'Animation', url: 'https://youtu.be/rE9s7Nr1zkM', thumbnail: 'images/Wanderer.png' },
+      { title: 'No Thank You', role: 'Director of Photography / Editor', url: 'https://youtu.be/BXiKQK-A_vw?si=2Uf9TV-3RbFKYQ6K', thumbnail: 'images/No Thank You.jpg' },
+      { title: 'TVS NTORQ', role: 'Director of Photography / Editor', url: 'https://youtu.be/CnauO59k-uw?si=6eBthvmNCfilw3SD', thumbnail: 'images/TVSNTORQ.png' }
+    ];
+
+    const workGrid = document.getElementById('work-grid');
+    featured.forEach(function (item) {
+      const a = document.createElement('a');
+      a.href = item.url || '#';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.className = 'group block rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:bg-white/10 transition';
+
+      const thumb = item.thumbnail
+        ? '<img src="' + item.thumbnail + '" alt="' + item.title + ' thumbnail" class="w-full aspect-video object-cover" />'
+        : '<div class="aspect-video bg-gradient-to-br from-cyan-500/20 via-violet-500/20 to-fuchsia-500/20"></div>';
+
+      a.innerHTML =
+        thumb +
+        '\n<div class="p-4">\n  <div class="font-medium">' + item.title + '</div>\n' +
+        '  <div class="text-sm text-slate-400">' + item.role + '</div>\n</div>';
+
+      workGrid.appendChild(a);
+    });
+
+    // ====== FULL FILMOGRAPHY DATA ======
+    // group: 'SDSU', 'Works', 'Animation', 'Photography'
+    const creditsData = [
+      // --- SDSU FILMS ---
+      { title: 'Delirium', year: 2024, group: 'SDSU', roles: ['Director','Writer','Editor','Director of Photography','Gaffer','Colorist'] },
+      { title: 'Shadows & Spotlights', year: 2023, group: 'SDSU', roles: ['Director','Writer','Editor','Colorist'] },
+      { title: 'Stuck In Time', year: 2023, group: 'SDSU', roles: ['Director','Writer','Producer','Editor','Colorist'] },
+      { title: 'We are still here', year: 2023, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Ballet Folklorico', year: 2023, group: 'SDSU', roles: ['Assistant Camera'] },
+      { title: 'Remembering', year: 2024, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Playing with Speedballs', year: 2023, group: 'SDSU', roles: ['Gaffer'] },
+      { title: 'Tilted', year: 2023, group: 'SDSU', roles: ['Assistant Camera'] },
+      { title: 'Starbound', year: 2024, group: 'SDSU', roles: ['Gaffer'] },
+      { title: 'Dust Bunny', year: 2023, group: 'SDSU', roles: ['Assistant Director'] },
+      { title: 'Dissolution', year: 2023, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Imposter', year: 2024, group: 'SDSU', roles: ['Gaffer'] },
+      { title: 'Early Summer', year: 2024, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Early Spring', year: 2024, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Code Red', year: 2024, group: 'SDSU', roles: ['Production Assistant'] },
+      { title: 'One Day in 365', year: 2025, group: 'SDSU', roles: ['Assistant Director','Gaffer','Editor','Assistant Camera','Colorist'] },
+      { title: 'Five More Minutes', year: 2025, group: 'SDSU', roles: ['Director','Writer','Colorist'] },
+      { title: 'Letters to the Cloud', year: 2025, group: 'SDSU', roles: ['Editor'] },
+      { title: 'Bloom', year: 2024, group: 'SDSU', roles: ['Editor','Colorist'] },
+      { title: 'Practically Perfect', year: 2024, group: 'SDSU', roles: ['Colorist'] },
+      { title: 'Red is the New Green', year: 2024, group: 'SDSU', roles: ['Director of Photography'] },
+      { title: 'Fleeting Memories', year: 2024, group: 'SDSU', roles: ['Director of Photography','Editor','Colorist'] },
+
+      // --- NON-SDSU WORKS (Non-SDSU, non-animation) ---
+      { title: 'No Thank You', year: 2021, group: 'Works', roles: ['Director of Photography','Editor','Colorist'], url: 'https://youtu.be/BXiKQK-A_vw?si=2Uf9TV-3RbFKYQ6K' },
+      { title: 'Judaai', year: 2022, group: 'Works', roles: ['Director of Photography','Editor','Colorist'], url: 'https://youtu.be/jl9Wi_skL0Y?si=C2fsTLbAKOObvnUw' },
+      { title: 'TVS Duramax Plus', year: 2022, group: 'Works', roles: ['Director of Photography','Editor','Colorist'], url: 'https://www.facebook.com/reel/745589396837420' },
+      { title: 'TVS NTORQ', year: 2022, group: 'Works', roles: ['Director of Photography','Editor','Colorist'], url: 'https://youtu.be/CnauO59k-uw?si=6eBthvmNCfilw3SD' },
+      { title: 'Upakar Tea TVC', year: 2019, group: 'Works', roles: ['Director','Director of Photography','Editor','Colorist'], url: 'https://www.youtube.com/watch?v=e1Nyo5Ezymo' },
+      { title: 'San Diego International Airport (Quieter Home Program)', year: 2025, group: 'Works', roles: ['Editor','Colorist'] },
+
+      // --- ANIMATION ---
+      { title: 'Kukhuri Kaa', group: 'Animation', roles: ['Animation'], url: 'https://youtu.be/5WEiUCUNwVQ?si=aXnOLEgw60gQC25q' },
+      { title: 'Dashain Aayo', group: 'Animation', roles: ['Animation'], url: 'https://youtu.be/igrmzm8DsIA?si=58FR-pLh_MYV5ZhH' },
+      { title: 'Tihar Aayo', group: 'Animation', roles: ['Animation'], url: 'https://www.youtube.com/watch?v=bcr9QBnP9nw' },
+      { title: 'Kaag Daajai', group: 'Animation', roles: ['Animation'], url: 'https://www.youtube.com/watch?v=b0MNFy4vAGQ' },
+      { title: 'Dhukur Kamila Ra Shikari', group: 'Animation', roles: ['Animation'], url: 'https://www.youtube.com/watch?v=mLHjTRhTRHo&t=88s' },
+      { title: 'Game Map Development', group: 'Animation', roles: ['Animation'], url: 'https://youtu.be/9kUEgwRmNOo?si=OvR6KBWFjmywMnkf' },
+      { title: 'Another One of Your Puppets (Music Video)', group: 'Animation', roles: ['Animation'], url: 'https://www.youtube.com/watch?v=f-4f471Xctc' },
+      { title: 'Wanderer', group: 'Animation', roles: ['Animation'], url: 'https://youtu.be/rE9s7Nr1zkM' },
+
+      // --- PHOTOGRAPHY ---
+      {
+        title: 'Photography Portfolio (Guru Shots)',
+        group: 'Photography',
+        roles: ['Photography'],
+        url: 'https://gurushots.com/mandarsumanta/photos' // TODO: replace with your real link
+      }
+    ];
+
+    const creditsEl = document.getElementById('credits');
+    const searchInput = document.getElementById('search');
+    const roleFilter = document.getElementById('roleFilter');
+    const creditCount = document.getElementById('creditCount');
+
+    function renderCredits() {
+      const q = (searchInput.value || '').toLowerCase();
+      const role = roleFilter.value;
+      creditsEl.innerHTML = '';
+      let shown = 0;
+
+      const groups = [
+        { id: 'SDSU', label: 'SDSU Films' },
+        { id: 'Works', label: 'Non-SDSU Works' },
+        { id: 'Animation', label: 'Animation' },
+        { id: 'Photography', label: 'Photography' }
+      ];
+
+      groups.forEach(function (groupInfo) {
+        const items = creditsData.filter(function (c) {
+          if (c.group !== groupInfo.id) return false;
+          const text = (c.title + ' ' + (c.roles || []).join(' ')).toLowerCase();
+          const matchesSearch = !q || text.includes(q);
+          const matchesRole = !role || (c.roles || []).includes(role);
+          return matchesSearch && matchesRole;
+        });
+
+        if (!items.length) return; // skip groups with nothing
+
+        // Group heading
+        const headingLi = document.createElement('li');
+        headingLi.className =
+          'px-4 pt-4 pb-2 text-xs font-semibold tracking-wide text-slate-400 uppercase';
+        headingLi.textContent = groupInfo.label;
+        creditsEl.appendChild(headingLi);
+
+        // Items in this group
+        items
+          .sort(function (a, b) {
+            return (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title);
+          })
+          .forEach(function (c) {
+            shown++;
+            const li = document.createElement('li');
+            li.className = 'p-0';
+            const roles = (c.roles || [])
+              .filter(function (r) { return r && r.trim().length; })
+              .join(' / ');
+
+            const inner =
+              '<div class="flex flex-wrap items-baseline justify-between gap-2">' +
+                '<div class="font-medium">' + c.title + '</div>' +
+                '<div class="text-xs text-slate-400">' + (c.year || '') + '</div>' +
+              '</div>' +
+              '<div class="text-sm text-slate-300">' + roles + '</div>';
+
+            if (c.url) {
+              li.innerHTML =
+                '<a href="' + c.url +
+                '" target="_blank" rel="noopener" class="block p-4 hover:bg-white/5">' +
+                inner +
+                '<div class="mt-1 text-xs text-cyan-400">Open link ↗</div>' +
+                '</a>';
+            } else {
+              li.innerHTML = '<div class="p-4 hover:bg-white/5">' + inner + '</div>';
+            }
+
+            creditsEl.appendChild(li);
+          });
+      });
+
+      creditCount.textContent =
+        shown + ' credit' + (shown === 1 ? '' : 's') + ' displayed';
+    }
+
+    searchInput.addEventListener('input', renderCredits);
+    roleFilter.addEventListener('change', renderCredits);
+    renderCredits();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
